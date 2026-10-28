@@ -33,7 +33,9 @@ IF/
 │   ├── datos.py
 │   ├── modelos.py
 │   ├── desde_cero.py
-│   └── graficas.py
+│   ├── graficas.py
+│   ├── prediccion.py
+│   └── textos.py
 │
 ├── resultados/             ← GENERADO por experimentos.py (tablas y figuras)
 │   ├── figuras/            ← 26 imágenes PNG para el informe
@@ -71,7 +73,7 @@ IF/
 |---------|----------|---------------|
 | `experimentos.py` | Ejecuta **todo** el estudio: (1) los experimentos 2D de cada modelo, (2) la verificación de nuestras implementaciones desde cero frente a scikit-learn y (3) los dos casos reales con búsqueda de hiperparámetros, métricas y gráficas. Guarda todo en `resultados/`. | Para regenerar los resultados (~2 min). |
 | `probar_modelos.py` | Lee los mejores hiperparámetros de `resultados/<caso>/metricas_prueba.csv`, entrena los 4 modelos, imprime el reporte de clasificación y predice casos individuales. | Para comprobar rápido que los modelos funcionan (~10 s). |
-| `app_simulacion.py` | Página web interactiva con 3 pestañas: **Simulación** (mueves C, γ, k o r y ves cambiar la frontera en vivo), **Fundamentos** (ecuaciones) y **Casos reales** (tablas y figuras de `resultados/`). | Para la presentación y para entender los modelos jugando con ellos. |
+| `app_simulacion.py` | Página web interactiva con 4 pestañas: **Simulación** (abres «Parámetros de la simulación», mueves C, γ, k o r y ves cambiar la frontera en vivo; también puedes clasificar un punto nuevo), **Fundamentos** (ecuaciones), **Casos reales** (tablas y figuras de `resultados/`) y **Probar un caso** (ingresas un paciente o un solicitante de crédito y ves qué predice cada modelo). Cada control, métrica y gráfica tiene su explicación. | Para la presentación y para entender los modelos jugando con ellos. |
 
 #### Módulos de `src/`
 
@@ -81,7 +83,9 @@ IF/
 | `datos.py` | Carga de datos y preprocesamiento. | `cargar_cancer()`, `cargar_credito()`, `dividir()` (división estratificada 75/25), `construir_preprocesador()` (escalado + one-hot), y los conjuntos 2D `lunas()`, `circulos()`, `nubes_solapadas()`, `densidad_variable()` |
 | `modelos.py` | Los 4 *pipelines* (preprocesador → clasificador) y sus espacios de búsqueda de hiperparámetros. | `construir_busquedas()`, `rango_radios()`, `puntajes()` |
 | `desde_cero.py` | Los 3 modelos programados "a mano" con NumPy/SciPy a partir de sus ecuaciones. Sirven para **demostrar** que entendemos la matemática: dan los mismos resultados que scikit-learn. | `SVMDualDesdeCero`, `KNNPonderadoDesdeCero`, `VecinosRadioDesdeCero`, `kernel_rbf()` |
-| `graficas.py` | Todas las funciones de dibujo, compartidas entre `experimentos.py` y la app. | `frontera_2d()`, `superficie_3d()`, `curvas_roc()`, `matrices_confusion()`, `curva_aprendizaje()`, `barras_importancia()`, `mapa_calor()` |
+| `graficas.py` | Todas las funciones de dibujo, compartidas entre `experimentos.py` y la app. | `frontera_2d()`, `superficie_3d()`, `curvas_roc()`, `matrices_confusion()`, `curva_aprendizaje()`, `barras_importancia()`, `mapa_calor()`, `confianza_modelos()` |
+| `prediccion.py` | Entrena los 4 modelos finales de un caso real con los mejores hiperparámetros guardados, valida datos de entrada y predice. Lo usan `probar_modelos.py` y la pestaña **Probar un caso**. | `entrenar_mejores()`, `preparar_entrada()`, `predecir()` |
+| `textos.py` | Todos los textos de ayuda de la app (controles, métricas, leyendas de gráficas, columnas, variables de cada caso). | `AYUDA_CONTROLES`, `AYUDA_METRICAS`, `LEYENDAS_CASOS`, `variables_cancer()`, `VARIABLES_CREDITO` |
 
 #### Resultados generados (`resultados/`)
 
@@ -181,6 +185,8 @@ Se abre en `http://localhost:8501`. Cosas para probar en la presentación:
 - **SVM Margen Suave + Nubes solapadas:** mueve C y observa cómo cambian el ancho del margen, Σξ y el número de vectores de soporte.
 - **Interruptor "implementación desde cero":** nuestra SVM resuelve el dual con SciPy; la métrica *Brecha de dualidad* (≈ 10⁻⁶) demuestra que llegó al óptimo.
 - **Radius Neighbors + Densidad variable:** con r = 0.3 aparece mucho rayado (puntos sin vecinos); con r grande desaparece.
+- **Probar un punto nuevo:** escribe x₁ y x₂ debajo de las métricas; aparece una estrella en la gráfica y el modelo dice su clase (en Radius, cuántos vecinos tiene dentro del radio).
+- **Pestaña Probar un caso:** elige *Diagnóstico de cáncer de mama*, el caso **#321** del conjunto de prueba y pulsa **Predecir**. Radius Neighbors dice *Benigno* con el umbral por defecto (P = 0.42 < 0.5), pero *Maligno* con el umbral ajustado (0.32). Es el ejemplo perfecto de por qué importa el umbral. También puedes llenar el formulario a mano o descargar la plantilla CSV, añadir filas y subirla.
 
 ### 5. Verificar la matemática
 

@@ -9,28 +9,16 @@ Uso:
     python probar_modelos.py --casos 10      # predice 10 casos individuales
 """
 import argparse
-import ast
 import sys
 import warnings
 
 import pandas as pd
 from sklearn.metrics import classification_report
-from sklearn.neighbors import KNeighborsClassifier, RadiusNeighborsClassifier
-from sklearn.pipeline import Pipeline
-from sklearn.svm import SVC
 
-from src.config import DIR_RESULTADOS, SEMILLA
-from src.datos import cargar_cancer, cargar_credito, construir_preprocesador, dividir
 from src.modelos import puntajes
+from src.prediccion import entrenar_mejores, ruta_resultados
 
 warnings.filterwarnings("ignore", category=UserWarning)
-
-CLASIFICADORES = {
-    "SVM RBF": lambda p: SVC(kernel="rbf", random_state=SEMILLA, **p),
-    "SVM Margen Suave": lambda p: SVC(kernel="linear", random_state=SEMILLA, **p),
-    "k-NN Ponderado": lambda p: KNeighborsClassifier(weights="distance", **p),
-    "Radius Neighbors": lambda p: RadiusNeighborsClassifier(outlier_label="most_frequent", **p),
-}
 
 
 def main():
@@ -40,21 +28,17 @@ def main():
     parser.add_argument("--casos", type=int, default=5, help="número de casos individuales a predecir")
     args = parser.parse_args()
 
-    ruta = DIR_RESULTADOS / args.caso / "metricas_prueba.csv"
+    ruta = ruta_resultados(args.caso)
     if not ruta.exists():
         sys.exit(f"No existe {ruta}. Ejecuta primero: python experimentos.py")
-    mejores = pd.read_csv(ruta).set_index("modelo")["mejores_parametros"].apply(ast.literal_eval)
-
-    X, y, clases = (cargar_cancer if args.caso == "cancer" else cargar_credito)()
-    Xtr, Xte, ytr, yte = dividir(X, y)
-    print(f"Caso: {args.caso} | entrenamiento = {len(Xtr)} | prueba = {len(Xte)}\n")
+    caso = entrenar_mejores(args.caso)
+    clases, Xte, yte = caso.clases, caso.Xte, caso.yte
+    print(f"Caso: {args.caso} | entrenamiento = {len(caso.Xtr)} | prueba = {len(Xte)}\n")
 
     predicciones = pd.DataFrame({"real": [clases[v] for v in yte.iloc[: args.casos]]}, index=Xte.index[: args.casos])
-    for nombre, crear in CLASIFICADORES.items():
-        parametros = mejores[nombre]
-        modelo = Pipeline([("prep", construir_preprocesador(X)), ("clf", crear(parametros))]).fit(Xtr, ytr)
+    for nombre, modelo in caso.modelos.items():
         print("=" * 70)
-        print(f"{nombre}  {parametros}")
+        print(f"{nombre}  {caso.parametros[nombre]}")
         print("=" * 70)
         print(classification_report(yte, modelo.predict(Xte), target_names=clases, digits=3, zero_division=0))
         muestra = Xte.iloc[: args.casos]

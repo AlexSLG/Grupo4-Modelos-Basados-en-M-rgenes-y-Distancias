@@ -232,3 +232,42 @@ def mapa_calor(ax, matriz, etiquetas_x, etiquetas_y, titulo, etiqueta_x, etiquet
     ax.set_title(titulo)
     ax.grid(False)
     return im
+
+
+def confianza_modelos(ax_svm, ax_vecinos, resultado, nombre_negativa, nombre_positiva):
+    """Puntaje de cada modelo para un caso: f(x) en las SVM y P(clase positiva) en los vecinos.
+
+    Cada barra sale del umbral por defecto (0 o 0.5) y se colorea según la clase predicha;
+    la marca punteada es el umbral ajustado para maximizar F1.
+    """
+    paneles = (
+        (ax_svm, resultado[resultado.es_svm], 0.0, "SVM: f(x)"),
+        (ax_vecinos, resultado[~resultado.es_svm], 0.5, f"Vecinos: P({nombre_positiva})"),
+    )
+    for ax, sub, centro, titulo in paneles:
+        y = np.arange(len(sub))[::-1]
+        valores = sub.puntaje.to_numpy()
+        colores = np.where(valores >= centro, CLASE_POS, CLASE_NEG)
+        ax.barh(y, valores - centro, left=centro, color=colores, height=0.5)
+        ax.axvline(centro, color=TEXTO, lw=1.2)
+        for yi, u in zip(y, sub.umbral):
+            if np.isfinite(u):
+                ax.plot([u, u], [yi - 0.38, yi + 0.38], color=TEXTO_2, ls=":", lw=1.6)
+        if centro == 0.0:
+            limite = max(2.0, 1.15 * np.abs(np.r_[valores, sub.umbral.dropna()]).max())
+            ax.set_xlim(-limite, limite)
+        else:
+            ax.set_xlim(0, 1)
+        desplazamiento = 0.02 * np.diff(ax.get_xlim())[0]
+        for yi, v in zip(y, valores):
+            ax.text(v + (desplazamiento if v >= centro else -desplazamiento), yi, f"{v:+.2f}" if centro == 0 else f"{v:.2f}",
+                    va="center", ha="left" if v >= centro else "right", fontsize=8.5, color=TEXTO)
+        ax.set_yticks(y, sub.modelo)
+        ax.set_ylim(-0.6, len(sub) - 0.4)
+        ax.set_title(titulo, fontsize=10)
+        ax.set_xlabel(f"← {nombre_negativa}   ·   {nombre_positiva} →")
+        ax.grid(axis="y", visible=False)
+    return [
+        Line2D([], [], color=TEXTO, lw=1.2, label="Umbral por defecto"),
+        Line2D([], [], color=TEXTO_2, lw=1.6, ls=":", label="Umbral ajustado (máx. F1)"),
+    ]

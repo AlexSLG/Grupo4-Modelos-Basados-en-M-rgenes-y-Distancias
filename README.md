@@ -15,14 +15,16 @@ IF/
 ├── GUIA.md                # Guía detallada: cada archivo y cómo funciona cada modelo
 ├── experimentos.py        # Ejecuta todo y genera resultados/ (tablas + figuras)
 ├── probar_modelos.py      # Prueba rápida de los 4 modelos con los mejores hiperparámetros
-├── app_simulacion.py      # Simulación interactiva (Streamlit)
+├── app_simulacion.py      # App Streamlit: simulación 2D, fundamentos, casos reales y «Probar un caso»
 ├── requirements.txt
 ├── src/
 │   ├── config.py          # Semilla, rutas y paleta de colores
 │   ├── datos.py           # Casos reales, conjuntos sintéticos 2D y preprocesamiento
 │   ├── modelos.py         # Pipelines y espacios de búsqueda de hiperparámetros
 │   ├── desde_cero.py      # SVM dual (QP con SLSQP), k-NN ponderado y Radius Neighbors en NumPy
-│   └── graficas.py        # Fronteras 2D/3D, ROC, matrices, curvas de aprendizaje, importancias
+│   ├── graficas.py        # Fronteras 2D/3D, ROC, matrices, curvas de aprendizaje, importancias
+│   ├── prediccion.py      # Modelos finales de los casos reales: entrenamiento y predicción
+│   └── textos.py          # Textos de ayuda de la app (controles, métricas, gráficas, variables)
 └── resultados/            # Se genera al ejecutar experimentos.py
     ├── figuras/           # 26 figuras PNG para el informe
     ├── cancer/, credito/  # Métricas en prueba y resultados de la validación cruzada
