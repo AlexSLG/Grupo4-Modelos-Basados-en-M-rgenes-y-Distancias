@@ -1,0 +1,12 @@
+modelo,comparacion,propio,sklearn
+SVM RBF,Vectores de soporte,76.0,76.0
+SVM RBF,Sesgo b,0.05431268089859662,0.054318458539058194
+SVM RBF,Acuerdo de predicciones en prueba,1.0,1.0
+SVM RBF,Brecha de dualidad (primal − dual),2.6888504063293794e-06,0.0
+SVM Margen Suave,Vectores de soporte,28.0,28.0
+SVM Margen Suave,Ancho del margen 2/‖w‖,1.1432504323860455,1.143375272697399
+SVM Margen Suave,Σ ξᵢ,23.690985852696834,23.691528222429504
+SVM Margen Suave,Brecha de dualidad (primal − dual),7.022364911790646e-10,0.0
+SVM Margen Suave,Acuerdo de predicciones en prueba,1.0,1.0
+k-NN Ponderado,Acuerdo de predicciones en prueba (k = 15),1.0,1.0
+Radius Neighbors,Acuerdo de predicciones en prueba (r = 0.7),1.0,1.0

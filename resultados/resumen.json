@@ -1,0 +1,654 @@
+{
+  "rbf_2d": {
+    "mejor_C": 0.31622776601683794,
+    "mejor_gamma": 3.1622776601683795,
+    "exactitud_prueba": 0.925,
+    "vectores_soporte": 105
+  },
+  "margen_suave_2d": {
+    "barrido": [
+      {
+        "C": 0.001,
+        "ancho_margen": 10.479,
+        "vectores_soporte": 140,
+        "suma_xi": 103.5729,
+        "en_margen": 134,
+        "mal_clasificados": 6,
+        "exactitud_entrenamiento": 0.9571,
+        "exactitud_prueba": 0.85
+      },
+      {
+        "C": 0.0018,
+        "ancho_margen": 6.1243,
+        "vectores_soporte": 138,
+        "suma_xi": 77.7971,
+        "en_margen": 130,
+        "mal_clasificados": 7,
+        "exactitud_entrenamiento": 0.95,
+        "exactitud_prueba": 0.85
+      },
+      {
+        "C": 0.0032,
+        "ancho_margen": 4.5483,
+        "vectores_soporte": 122,
+        "suma_xi": 59.9822,
+        "en_margen": 112,
+        "mal_clasificados": 9,
+        "exactitud_entrenamiento": 0.9357,
+        "exactitud_prueba": 0.9
+      },
+      {
+        "C": 0.0056,
+        "ancho_margen": 3.8504,
+        "vectores_soporte": 100,
+        "suma_xi": 50.7478,
+        "en_margen": 91,
+        "mal_clasificados": 7,
+        "exactitud_entrenamiento": 0.95,
+        "exactitud_prueba": 0.9
+      },
+      {
+        "C": 0.01,
+        "ancho_margen": 3.2092,
+        "vectores_soporte": 82,
+        "suma_xi": 43.0076,
+        "en_margen": 70,
+        "mal_clasificados": 10,
+        "exactitud_entrenamiento": 0.9286,
+        "exactitud_prueba": 0.9
+      },
+      {
+        "C": 0.0178,
+        "ancho_margen": 2.5997,
+        "vectores_soporte": 71,
+        "suma_xi": 35.4854,
+        "en_margen": 60,
+        "mal_clasificados": 9,
+        "exactitud_entrenamiento": 0.9357,
+        "exactitud_prueba": 0.8833
+      },
+      {
+        "C": 0.0316,
+        "ancho_margen": 2.3107,
+        "vectores_soporte": 56,
+        "suma_xi": 32.3091,
+        "en_margen": 47,
+        "mal_clasificados": 9,
+        "exactitud_entrenamiento": 0.9357,
+        "exactitud_prueba": 0.8833
+      },
+      {
+        "C": 0.0562,
+        "ancho_margen": 1.9131,
+        "vectores_soporte": 49,
+        "suma_xi": 28.116,
+        "en_margen": 39,
+        "mal_clasificados": 9,
+        "exactitud_entrenamiento": 0.9357,
+        "exactitud_prueba": 0.8833
+      },
+      {
+        "C": 0.1,
+        "ancho_margen": 1.7121,
+        "vectores_soporte": 40,
+        "suma_xi": 26.2506,
+        "en_margen": 29,
+        "mal_clasificados": 10,
+        "exactitud_entrenamiento": 0.9286,
+        "exactitud_prueba": 0.8833
+      },
+      {
+        "C": 0.1778,
+        "ancho_margen": 1.5923,
+        "vectores_soporte": 36,
+        "suma_xi": 25.4874,
+        "en_margen": 25,
+        "mal_clasificados": 10,
+        "exactitud_entrenamiento": 0.9286,
+        "exactitud_prueba": 0.8833
+      },
+      {
+        "C": 0.3162,
+        "ancho_margen": 1.4044,
+        "vectores_soporte": 32,
+        "suma_xi": 24.4906,
+        "en_margen": 21,
+        "mal_clasificados": 9,
+        "exactitud_entrenamiento": 0.9357,
+        "exactitud_prueba": 0.9
+      },
+      {
+        "C": 0.5623,
+        "ancho_margen": 1.4006,
+        "vectores_soporte": 30,
+        "suma_xi": 24.4783,
+        "en_margen": 20,
+        "mal_clasificados": 9,
+        "exactitud_entrenamiento": 0.9357,
+        "exactitud_prueba": 0.9
+      },
+      {
+        "C": 1.0,
+        "ancho_margen": 1.1434,
+        "vectores_soporte": 28,
+        "suma_xi": 23.6915,
+        "en_margen": 18,
+        "mal_clasificados": 9,
+        "exactitud_entrenamiento": 0.9357,
+        "exactitud_prueba": 0.9
+      },
+      {
+        "C": 1.7783,
+        "ancho_margen": 1.0721,
+        "vectores_soporte": 26,
+        "suma_xi": 23.5498,
+        "en_margen": 16,
+        "mal_clasificados": 9,
+        "exactitud_entrenamiento": 0.9357,
+        "exactitud_prueba": 0.9
+      },
+      {
+        "C": 3.1623,
+        "ancho_margen": 1.0441,
+        "vectores_soporte": 26,
+        "suma_xi": 23.5169,
+        "en_margen": 15,
+        "mal_clasificados": 9,
+        "exactitud_entrenamiento": 0.9357,
+        "exactitud_prueba": 0.8833
+      },
+      {
+        "C": 5.6234,
+        "ancho_margen": 1.0441,
+        "vectores_soporte": 26,
+        "suma_xi": 23.5173,
+        "en_margen": 15,
+        "mal_clasificados": 9,
+        "exactitud_entrenamiento": 0.9357,
+        "exactitud_prueba": 0.8833
+      },
+      {
+        "C": 10.0,
+        "ancho_margen": 1.0243,
+        "vectores_soporte": 25,
+        "suma_xi": 23.5076,
+        "en_margen": 15,
+        "mal_clasificados": 9,
+        "exactitud_entrenamiento": 0.9357,
+        "exactitud_prueba": 0.8833
+      },
+      {
+        "C": 17.7828,
+        "ancho_margen": 1.0243,
+        "vectores_soporte": 25,
+        "suma_xi": 23.5076,
+        "en_margen": 15,
+        "mal_clasificados": 9,
+        "exactitud_entrenamiento": 0.9357,
+        "exactitud_prueba": 0.8833
+      },
+      {
+        "C": 31.6228,
+        "ancho_margen": 1.0238,
+        "vectores_soporte": 25,
+        "suma_xi": 23.5081,
+        "en_margen": 13,
+        "mal_clasificados": 9,
+        "exactitud_entrenamiento": 0.9357,
+        "exactitud_prueba": 0.8833
+      },
+      {
+        "C": 56.2341,
+        "ancho_margen": 1.024,
+        "vectores_soporte": 25,
+        "suma_xi": 23.5077,
+        "en_margen": 13,
+        "mal_clasificados": 9,
+        "exactitud_entrenamiento": 0.9357,
+        "exactitud_prueba": 0.8833
+      },
+      {
+        "C": 100.0,
+        "ancho_margen": 1.0103,
+        "vectores_soporte": 24,
+        "suma_xi": 23.5074,
+        "en_margen": 12,
+        "mal_clasificados": 9,
+        "exactitud_entrenamiento": 0.9357,
+        "exactitud_prueba": 0.8833
+      },
+      {
+        "C": 177.8279,
+        "ancho_margen": 1.0102,
+        "vectores_soporte": 24,
+        "suma_xi": 23.5074,
+        "en_margen": 12,
+        "mal_clasificados": 9,
+        "exactitud_entrenamiento": 0.9357,
+        "exactitud_prueba": 0.8833
+      },
+      {
+        "C": 316.2278,
+        "ancho_margen": 1.0102,
+        "vectores_soporte": 24,
+        "suma_xi": 23.5074,
+        "en_margen": 12,
+        "mal_clasificados": 9,
+        "exactitud_entrenamiento": 0.9357,
+        "exactitud_prueba": 0.8833
+      },
+      {
+        "C": 562.3413,
+        "ancho_margen": 1.0103,
+        "vectores_soporte": 24,
+        "suma_xi": 23.5073,
+        "en_margen": 12,
+        "mal_clasificados": 9,
+        "exactitud_entrenamiento": 0.9357,
+        "exactitud_prueba": 0.8833
+      },
+      {
+        "C": 1000.0,
+        "ancho_margen": 1.0102,
+        "vectores_soporte": 24,
+        "suma_xi": 23.5075,
+        "en_margen": 12,
+        "mal_clasificados": 9,
+        "exactitud_entrenamiento": 0.9357,
+        "exactitud_prueba": 0.8833
+      }
+    ]
+  },
+  "vecinos_2d": {
+    "mejor_k": 37,
+    "pesos_mejor_k": "uniform"
+  },
+  "verificacion_desde_cero": [
+    {
+      "modelo": "SVM RBF",
+      "comparacion": "Vectores de soporte",
+      "propio": 76,
+      "sklearn": 76
+    },
+    {
+      "modelo": "SVM RBF",
+      "comparacion": "Sesgo b",
+      "propio": 0.05431268089859662,
+      "sklearn": 0.054318458539058194
+    },
+    {
+      "modelo": "SVM RBF",
+      "comparacion": "Acuerdo de predicciones en prueba",
+      "propio": 1.0,
+      "sklearn": 1.0
+    },
+    {
+      "modelo": "SVM RBF",
+      "comparacion": "Brecha de dualidad (primal − dual)",
+      "propio": 2.6888504063293794e-06,
+      "sklearn": 0.0
+    },
+    {
+      "modelo": "SVM Margen Suave",
+      "comparacion": "Vectores de soporte",
+      "propio": 28,
+      "sklearn": 28
+    },
+    {
+      "modelo": "SVM Margen Suave",
+      "comparacion": "Ancho del margen 2/‖w‖",
+      "propio": 1.1432504323860455,
+      "sklearn": 1.143375272697399
+    },
+    {
+      "modelo": "SVM Margen Suave",
+      "comparacion": "Σ ξᵢ",
+      "propio": 23.690985852696834,
+      "sklearn": 23.691528222429504
+    },
+    {
+      "modelo": "SVM Margen Suave",
+      "comparacion": "Brecha de dualidad (primal − dual)",
+      "propio": 7.022364911790646e-10,
+      "sklearn": 0.0
+    },
+    {
+      "modelo": "SVM Margen Suave",
+      "comparacion": "Acuerdo de predicciones en prueba",
+      "propio": 1.0,
+      "sklearn": 1.0
+    },
+    {
+      "modelo": "k-NN Ponderado",
+      "comparacion": "Acuerdo de predicciones en prueba (k = 15)",
+      "propio": 1.0,
+      "sklearn": 1.0
+    },
+    {
+      "modelo": "Radius Neighbors",
+      "comparacion": "Acuerdo de predicciones en prueba (r = 0.7)",
+      "propio": 1.0,
+      "sklearn": 1.0
+    }
+  ],
+  "cancer": {
+    "muestras": 569,
+    "variables": 30,
+    "proporcion_positiva": 0.37258347978910367,
+    "clases": [
+      "Benigno",
+      "Maligno"
+    ],
+    "modelos": [
+      {
+        "modelo": "SVM RBF",
+        "accuracy": 0.972027972027972,
+        "precision": 1.0,
+        "recall": 0.9245283018867925,
+        "f1": 0.9607843137254902,
+        "roc_auc": 0.9974842767295597,
+        "auc_cv": 0.995480123306508,
+        "combinaciones": 72,
+        "tiempo_busqueda_s": 5.2080323999980465,
+        "tiempo_ajuste_s": 0.021138906478881836,
+        "tiempo_prediccion_ms": 8.734700037166476,
+        "vectores_soporte": 56.0,
+        "mejores_parametros": {
+          "C": 10.0,
+          "class_weight": "balanced",
+          "gamma": 0.01
+        },
+        "umbral_f1": 0.13058057459603045,
+        "precision_umbral": 1.0,
+        "recall_umbral": 0.9245283018867925,
+        "f1_umbral": 0.9607843137254902,
+        "pct_prueba_sin_vecinos": NaN,
+        "auc_cv_repetida_media": 0.9954654003516602,
+        "auc_cv_repetida_desv": 0.006220968191576323,
+        "importancia_top10": {
+          "worst texture": 0.007400419287211768,
+          "worst concavity": 0.005555555555555569,
+          "mean concave points": 0.003333333333333355,
+          "mean concavity": 0.0032704402515723375,
+          "texture error": 0.002683438155136264,
+          "worst radius": 0.0023899371069182385,
+          "worst area": 0.002075471698113207,
+          "compactness error": 0.0020335429769392176,
+          "worst concave points": 0.0019496855345911834,
+          "worst perimeter": 0.0018448637316561879
+        }
+      },
+      {
+        "modelo": "SVM Margen Suave",
+        "accuracy": 0.9790209790209791,
+        "precision": 1.0,
+        "recall": 0.9433962264150944,
+        "f1": 0.970873786407767,
+        "roc_auc": 0.9970649895178197,
+        "auc_cv": 0.9932380074840512,
+        "combinaciones": 12,
+        "tiempo_busqueda_s": 0.7743339000153355,
+        "tiempo_ajuste_s": 0.008356332778930664,
+        "tiempo_prediccion_ms": 2.7983999461866915,
+        "vectores_soporte": 51.0,
+        "mejores_parametros": {
+          "C": 0.1,
+          "class_weight": null
+        },
+        "umbral_f1": 0.028353576648400214,
+        "precision_umbral": 1.0,
+        "recall_umbral": 0.9433962264150944,
+        "f1_umbral": 0.970873786407767,
+        "pct_prueba_sin_vecinos": NaN,
+        "auc_cv_repetida_media": 0.9938607955185862,
+        "auc_cv_repetida_desv": 0.006073669441783191,
+        "importancia_top10": {
+          "worst symmetry": 0.005723270440251593,
+          "worst texture": 0.002473794549266284,
+          "worst concavity": 0.0018867924528302217,
+          "worst smoothness": 0.0016981132075472027,
+          "mean concave points": 0.0014465408805032,
+          "mean concavity": 0.0014255765199161607,
+          "worst perimeter": 0.0014046121593291661,
+          "worst radius": 0.0013207547169811428,
+          "texture error": 0.0009643605870021555,
+          "worst area": 0.0009433962264151164
+        }
+      },
+      {
+        "modelo": "k-NN Ponderado",
+        "accuracy": 0.958041958041958,
+        "precision": 1.0,
+        "recall": 0.8867924528301887,
+        "f1": 0.94,
+        "roc_auc": 0.9972746331236897,
+        "auc_cv": 0.9913707986745115,
+        "combinaciones": 42,
+        "tiempo_busqueda_s": 3.174844499968458,
+        "tiempo_ajuste_s": 0.013841867446899414,
+        "tiempo_prediccion_ms": 19.5895999786444,
+        "vectores_soporte": NaN,
+        "mejores_parametros": {
+          "n_neighbors": 37,
+          "p": 2
+        },
+        "umbral_f1": 0.27272727272727276,
+        "precision_umbral": 0.9622641509433962,
+        "recall_umbral": 0.9622641509433962,
+        "f1_umbral": 0.9622641509433962,
+        "pct_prueba_sin_vecinos": NaN,
+        "auc_cv_repetida_media": 0.9907110553188611,
+        "auc_cv_repetida_desv": 0.005183942745768677,
+        "importancia_top10": {
+          "worst concave points": 0.002243186582809198,
+          "worst texture": 0.0021383647798741802,
+          "worst radius": 0.001383647798742127,
+          "worst compactness": 0.00117400419287208,
+          "worst perimeter": 0.0011530398322851187,
+          "worst smoothness": 0.0010901467505240793,
+          "smoothness error": 0.0010272536687630617,
+          "worst concavity": 0.0008176100628930816,
+          "worst fractal dimension": 0.0007756813417190478,
+          "mean radius": 0.000503144654088028
+        }
+      },
+      {
+        "modelo": "Radius Neighbors",
+        "accuracy": 0.7202797202797203,
+        "precision": 1.0,
+        "recall": 0.24528301886792453,
+        "f1": 0.3939393939393939,
+        "roc_auc": 0.9960167714884696,
+        "auc_cv": 0.9871302354545659,
+        "combinaciones": 40,
+        "tiempo_busqueda_s": 2.758369999995921,
+        "tiempo_ajuste_s": 0.01120138168334961,
+        "tiempo_prediccion_ms": 11.553000018466264,
+        "vectores_soporte": NaN,
+        "mejores_parametros": {
+          "radius": 10.78572,
+          "weights": "distance"
+        },
+        "umbral_f1": 0.32323232323232326,
+        "precision_umbral": 0.9444444444444444,
+        "recall_umbral": 0.9622641509433962,
+        "f1_umbral": 0.9532710280373832,
+        "pct_prueba_sin_vecinos": 0.0,
+        "auc_cv_repetida_media": 0.9833749380086111,
+        "auc_cv_repetida_desv": 0.01525171021193241,
+        "importancia_top10": {
+          "worst radius": 0.002285115303983165,
+          "worst texture": 0.002243186582809176,
+          "worst perimeter": 0.0018448637316561434,
+          "worst concave points": 0.0017400419287211366,
+          "mean radius": 0.001719077568134153,
+          "worst area": 0.0016771488469601193,
+          "mean perimeter": 0.0016771488469601082,
+          "mean texture": 0.0015723270440250903,
+          "mean area": 0.0014675052410901169,
+          "worst concavity": 0.001090146750524068
+        }
+      }
+    ]
+  },
+  "credito": {
+    "muestras": 1000,
+    "variables": 20,
+    "proporcion_positiva": 0.3,
+    "clases": [
+      "Buen pagador",
+      "Mal pagador"
+    ],
+    "modelos": [
+      {
+        "modelo": "SVM RBF",
+        "accuracy": 0.72,
+        "precision": 0.5210084033613446,
+        "recall": 0.8266666666666667,
+        "f1": 0.6391752577319587,
+        "roc_auc": 0.8197333333333334,
+        "auc_cv": 0.7804444444444444,
+        "combinaciones": 72,
+        "tiempo_busqueda_s": 12.9579381000367,
+        "tiempo_ajuste_s": 0.04419398307800293,
+        "tiempo_prediccion_ms": 22.55459997104481,
+        "vectores_soporte": 575.0,
+        "mejores_parametros": {
+          "C": 1.0,
+          "class_weight": "balanced",
+          "gamma": 0.01
+        },
+        "umbral_f1": 0.08020818055868828,
+        "precision_umbral": 0.5405405405405406,
+        "recall_umbral": 0.8,
+        "f1_umbral": 0.6451612903225806,
+        "pct_prueba_sin_vecinos": NaN,
+        "auc_cv_repetida_media": 0.7777100529100529,
+        "auc_cv_repetida_desv": 0.043080495839824096,
+        "importancia_top10": {
+          "checking_status": 0.10123428571428583,
+          "duration": 0.03041523809523815,
+          "purpose": 0.018979047619047694,
+          "credit_amount": 0.011497142857142928,
+          "installment_commitment": 0.007824761904762011,
+          "age": 0.007504761904761981,
+          "savings_status": 0.006476190476190547,
+          "credit_history": 0.005744761904761986,
+          "own_telephone": 0.004129523809523916,
+          "employment": 0.0038933333333334265
+        }
+      },
+      {
+        "modelo": "SVM Margen Suave",
+        "accuracy": 0.708,
+        "precision": 0.5083333333333333,
+        "recall": 0.8133333333333334,
+        "f1": 0.6256410256410256,
+        "roc_auc": 0.8148571428571428,
+        "auc_cv": 0.7735026455026455,
+        "combinaciones": 12,
+        "tiempo_busqueda_s": 4.386559100006707,
+        "tiempo_ajuste_s": 0.0470273494720459,
+        "tiempo_prediccion_ms": 15.970499953255057,
+        "vectores_soporte": 609.0,
+        "mejores_parametros": {
+          "C": 0.01,
+          "class_weight": "balanced"
+        },
+        "umbral_f1": 0.22638075681348147,
+        "precision_umbral": 0.5684210526315789,
+        "recall_umbral": 0.72,
+        "f1_umbral": 0.6352941176470588,
+        "pct_prueba_sin_vecinos": NaN,
+        "auc_cv_repetida_media": 0.7740783068783068,
+        "auc_cv_repetida_desv": 0.04442747451282352,
+        "importancia_top10": {
+          "checking_status": 0.10675047619047615,
+          "duration": 0.02940190476190475,
+          "purpose": 0.020091428571428583,
+          "credit_amount": 0.009965714285714277,
+          "installment_commitment": 0.008533333333333315,
+          "savings_status": 0.007679999999999965,
+          "credit_history": 0.007382857142857113,
+          "age": 0.0073295238095237745,
+          "own_telephone": 0.004380952380952341,
+          "personal_status": 0.003786666666666616
+        }
+      },
+      {
+        "modelo": "k-NN Ponderado",
+        "accuracy": 0.736,
+        "precision": 0.7368421052631579,
+        "recall": 0.18666666666666668,
+        "f1": 0.2978723404255319,
+        "roc_auc": 0.7827809523809525,
+        "auc_cv": 0.7589841269841271,
+        "combinaciones": 42,
+        "tiempo_busqueda_s": 5.682897600054275,
+        "tiempo_ajuste_s": 0.030182600021362305,
+        "tiempo_prediccion_ms": 22.30680000502616,
+        "vectores_soporte": NaN,
+        "mejores_parametros": {
+          "n_neighbors": 39,
+          "p": 1
+        },
+        "umbral_f1": 0.21426291956026428,
+        "precision_umbral": 0.4589041095890411,
+        "recall_umbral": 0.8933333333333333,
+        "f1_umbral": 0.6063348416289592,
+        "pct_prueba_sin_vecinos": NaN,
+        "auc_cv_repetida_media": 0.7536126984126984,
+        "auc_cv_repetida_desv": 0.04660919932799902,
+        "importancia_top10": {
+          "checking_status": 0.08166095238095247,
+          "purpose": 0.013539047619047718,
+          "duration": 0.006872380952381052,
+          "credit_amount": 0.006346666666666767,
+          "other_parties": 0.003177142857142934,
+          "housing": 0.0028800000000000826,
+          "foreign_worker": 0.002514285714285758,
+          "credit_history": 0.0015390476190476842,
+          "job": 0.0013638095238096225,
+          "age": 0.0005638095238095886
+        }
+      },
+      {
+        "modelo": "Radius Neighbors",
+        "accuracy": 0.716,
+        "precision": 0.75,
+        "recall": 0.08,
+        "f1": 0.14457831325301204,
+        "roc_auc": 0.7779047619047619,
+        "auc_cv": 0.7429417989417989,
+        "combinaciones": 40,
+        "tiempo_busqueda_s": 6.385869899997488,
+        "tiempo_ajuste_s": 0.045203447341918945,
+        "tiempo_prediccion_ms": 30.40260000852868,
+        "vectores_soporte": NaN,
+        "mejores_parametros": {
+          "radius": 4.86087,
+          "weights": "distance"
+        },
+        "umbral_f1": 0.2828282828282829,
+        "precision_umbral": 0.5420560747663551,
+        "recall_umbral": 0.7733333333333333,
+        "f1_umbral": 0.6373626373626373,
+        "pct_prueba_sin_vecinos": 0.0,
+        "auc_cv_repetida_media": 0.7374984126984125,
+        "auc_cv_repetida_desv": 0.0508601229951631,
+        "importancia_top10": {
+          "checking_status": 0.04873904761904755,
+          "credit_amount": 0.043977142857142805,
+          "duration": 0.04222095238095238,
+          "installment_commitment": 0.023390476190476194,
+          "age": 0.017660952380952378,
+          "num_dependents": 0.0119352380952381,
+          "purpose": 0.004403809523809488,
+          "existing_credits": 0.004041904761904735,
+          "housing": 0.00223238095238093,
+          "residence_since": 0.002159999999999951
+        }
+      }
+    ]
+  }
+}

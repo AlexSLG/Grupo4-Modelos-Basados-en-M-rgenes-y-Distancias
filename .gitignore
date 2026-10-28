@@ -1,0 +1,17 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Datos descargados de OpenML (se vuelven a descargar al ejecutar experimentos.py)
+datos_cache/
+
+# Configuración local de editores y herramientas
+.claude/
+.vscode/
+.idea/
+.ipynb_checkpoints/
+
+# Secretos de Streamlit (nunca subirlos)
+.streamlit/secrets.toml
